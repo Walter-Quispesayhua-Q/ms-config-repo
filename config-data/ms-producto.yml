@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ms-producto
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms_producto
+    username: postgres
+    password: ${DB_PASSWORD:POSTGRES}
+  jpa:
+    hibernate:
+      ddl-auto: update
