@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms-catalogo
+    name: ms_catalogo
   datasource:
     url: jdbc:postgresql://localhost:5432/ms_catalogo
     username: postgres
