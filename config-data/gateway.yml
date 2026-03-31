@@ -1,0 +1,28 @@
+server:
+  port: 8090
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_SERVER_URI:http://localhost:8761/eureka}
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: catalogo
+          uri: lb://MS_CATALOGO
+          predicates:
+            - Path=/catalogo/**
+          filters:
+            - StripPrefix=1
+        - id: producto
+          uri: lb://MS_PRODUCTO
+          predicates:
+            - Path=/producto/**
+          filters:
+            - StripPrefix=1
