@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: ms_catalogo
+    name: ms-catalogo
   datasource:
     url: jdbc:postgresql://localhost:5432/ms_catalogo
     username: postgres
