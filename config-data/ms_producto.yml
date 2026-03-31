@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: ms-producto
+    name: ms_producto
   datasource:
     url: jdbc:postgresql://localhost:5432/ms_producto
     username: postgres
@@ -19,4 +19,5 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
   instance:
+    appname: ms-producto
     prefer-ip-address: true
