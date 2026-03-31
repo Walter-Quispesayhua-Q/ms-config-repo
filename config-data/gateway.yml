@@ -17,13 +17,13 @@ spring:
         webflux:
           routes:
             - id: catalogo
-              uri: lb://MS_CATALOGO
+              uri: lb://ms_catalogo
               predicates:
                 - Path=/catalogo/**
               filters:
                 - StripPrefix=1
             - id: producto
-              uri: lb://MS_PRODUCTO
+              uri: lb://ms_producto
               predicates:
                 - Path=/producto/**
               filters:
