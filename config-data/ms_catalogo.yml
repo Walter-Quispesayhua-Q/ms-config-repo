@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: ms-catalogo
+    name: ms_catalogo
   datasource:
     url: jdbc:postgresql://localhost:5432/ms_catalogo
     username: postgres
@@ -19,4 +19,5 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
   instance:
+    appname: ms-catalogo
     prefer-ip-address: true
