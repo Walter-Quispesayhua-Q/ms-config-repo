@@ -13,16 +13,18 @@ eureka:
 spring:
   cloud:
     gateway:
-      routes:
-        - id: catalogo
-          uri: lb://MS_CATALOGO
-          predicates:
-            - Path=/catalogo/**
-          filters:
-            - StripPrefix=1
-        - id: producto
-          uri: lb://MS_PRODUCTO
-          predicates:
-            - Path=/producto/**
-          filters:
-            - StripPrefix=1
+      server:
+        webflux:
+          routes:
+            - id: catalogo
+              uri: lb://MS_CATALOGO
+              predicates:
+                - Path=/catalogo/**
+              filters:
+                - StripPrefix=1
+            - id: producto
+              uri: lb://MS_PRODUCTO
+              predicates:
+                - Path=/producto/**
+              filters:
+                - StripPrefix=1
